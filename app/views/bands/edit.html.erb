@@ -1,0 +1,21 @@
+<h2> Edit information about "<%= @band.band_name %> band" </h2>
+
+<% unless @band.errors %>
+	<p> <%= @band.errors.full_messages%> </p>
+<% end %>
+
+<form action="<%= band_url(@band) %>" method="post">
+
+<%= render "form_partial" %>
+<input type="hidden" name="_method" value="put">
+
+</form>
+<br>
+
+
+<form action="<%= band_url(@band) %>" method="post">
+	<input type="submit" value="Delete Band">
+	<input type="hidden" name="_method" value="delete">
+</form>
+
+<!-- make a button to for delete -->

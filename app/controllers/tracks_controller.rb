@@ -4,14 +4,19 @@ class TracksController < ApplicationController
 
   end
 
+  def show
+
+  end
+
   def new
+
   end
 
   def create
 
   end
 
-  def destroy
+  def edit
 
   end
 
@@ -19,5 +24,8 @@ class TracksController < ApplicationController
 
   end
 
+  def destroy
+
+  end
 
 end

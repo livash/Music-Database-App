@@ -1,0 +1,13 @@
+<h1> Create new Band </h1>
+
+<% unless @band.errors.empty? %>
+	 <%= @band.errors.full_messages %>
+<% end %>
+
+<br>
+
+<form action = <%= bands_url %> method= "post">
+
+	<%= render "form_partial"%>
+
+</form>
