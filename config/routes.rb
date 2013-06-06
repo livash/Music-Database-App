@@ -1,10 +1,9 @@
 MusicApp::Application.routes.draw do
-  resources :bands do
-    resource :albums do
-      resource :tracks
-    end
-    resources :albums, :except => [:new]
-  end
+  resources :bands
+  resources :albums
+  resources :tracks
 
-match "/albums/index" => "albums#index_custom", via: :get
+
+
+  # match "/albums/index" => "albums#index_custom", via: :get
 end

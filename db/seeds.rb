@@ -15,7 +15,6 @@ album2 = Album.create!(:album_name => "Hello 2", :band_id => 1)
 
 album3 = Album.create!(:album_name => "Yes 1", :band_id => 2)
 album4 = Album.create!(:album_name => "Yes 2", :band_id => 2)
-
 album5 = Album.create!(:album_name => "No 1", :band_id => 2)
 
 track1 = Track.create!(:track_name => "Hoho", :album_id => 1)

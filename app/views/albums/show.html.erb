@@ -1,0 +1,14 @@
+<h2>INFO for album <%= @album.album_name%></h2>
+
+<% if @album.tracks %>
+
+<h3> Tracks </h3>
+<ol>
+	<% @album.tracks.each do |track| %>
+	<li>
+		<%= track.track_name %>
+	</li>
+	<% end %>
+<ol>
+
+<% end %>

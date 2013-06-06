@@ -1,0 +1,12 @@
+<h2>All albums in your data base</h2>
+
+
+<% @albums.each do |album| %>
+<p> <b>Band <%= album.band.band_name %></b>  has album <b><%= album.album_name%></b>
+</p>
+	<ul>
+	<% album.tracks.each do |track| %>
+		<li><%= track.track_name%></li>
+	<% end %>
+	</ul>
+<% end %>
