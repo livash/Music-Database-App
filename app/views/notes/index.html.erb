@@ -1,0 +1,16 @@
+<h2>All notes for your tracks:</h2>
+
+<% @notes.each do |note| %>
+Note id: <%= note.id %>
+<br>
+This note is for track <%= note.track.track_name %>
+<br>
+<%= note.body %>
+<br>
+<br>
+<% end %>
+<br>
+<br>
+<%= link_to "All Tracks", tracks_url %>
+<br>
+<%= link_to "Make new note", new_note_url %>

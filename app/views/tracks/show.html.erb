@@ -5,8 +5,17 @@
 	Album: <%= @track.album.album_name %>
 	<br>
 	<br>
-	<%= button_to "Delete", track_url(@track), :method => "delete" %>
+	<% if @track.notes %>
+	Notes for this track: <%= @track.notes.map(&:body) %>
 	<br>
+	<br>
+	<% end %>
+	<br>
+	<%= button_to "Delete Track", track_url(@track), :method => "delete" %>
+	<br>
+	<%= render :partial => "new_note" %>
+	<br>
+	<%= link_to "Make new note", new_note_url %>
 	<br>
 	<%= link_to "All Albums", albums_path %>
 	<br>

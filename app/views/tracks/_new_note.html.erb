@@ -1,0 +1,13 @@
+<h2>Make a note about this track:</h2>
+<br>
+<%= form_for(@note) do |n| %>
+	<%= n.label :track_id %>
+	<%= n.collection_select :track_id, @tracks, :id, :track_name %>
+	<br>
+	<%= n.label :body %>
+	<%= n.text_area :body %>
+	<br>
+	<br>
+	<%= n.submit "Post note!"%>
+
+<% end %>
