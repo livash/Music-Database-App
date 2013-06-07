@@ -1,6 +1,18 @@
 <h2>Edit track <%= @track.track_name%></h2>
 
 <%= form_for(@track) do |t| %>
-
-
+ <%= t.label :track_name %>
+ <%= t.text_field :track_name %>
+ <br>
+ <br>
+ <%= t.label :album_id %>
+ <%= t.collection_select :album_id, @albums, :id, :album_name %>
+ <br>
+ <br>
+ <%= t.submit "Add track!"  %>
 <% end %>
+
+<br>
+<%= link_to "All Albums", albums_path %>
+<br>
+<%= link_to "All Bands", bands_path %>

@@ -9,6 +9,17 @@
 		<%= album.album_name %>
 	</li>
 	<% end %>
-<ol>
+</ol>
 
 <% end %>
+
+<br>
+<%= button_to "Delete", band_url(@band), :method => "delete" %>
+<br>
+<%= link_to "Add new band", new_band_url %>
+<br>
+<%= link_to "Add new album", new_album_url %>
+<br>
+<%= link_to "All Albums", albums_path %>
+<br>
+<%= link_to "All tracks", tracks_path %>

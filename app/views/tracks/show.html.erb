@@ -1,0 +1,13 @@
+<h2>Information about track "<%= @track.track_name %>"</h2>
+
+	Band: <%= @track.band.band_name%>
+	<br>
+	Album: <%= @track.album.album_name %>
+	<br>
+	<br>
+	<%= button_to "Delete", track_url(@track), :method => "delete" %>
+	<br>
+	<br>
+	<%= link_to "All Albums", albums_path %>
+	<br>
+	<%= link_to "All Bands", bands_path %>

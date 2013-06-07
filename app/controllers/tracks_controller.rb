@@ -10,6 +10,7 @@ class TracksController < ApplicationController
 
   def new
     @track = Track.new
+    @albums = Album.all
   end
 
   def create
